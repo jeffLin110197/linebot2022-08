@@ -237,14 +237,17 @@ def pushMessage(payload):
 
 
 def getTotalSentMessageCount():
-    response = {}
+    r = requests.get('https://api.line.me/v2/bot/message/quota/consumption', headers=HEADER)
+    print(r.json())
     return 0
 
 
 def getTodayCovid19Message():
-    date = ""
-    total_count = 0
-    count = 0
+    r = requests.get('https://covid-19.nchc.org.tw/api/covid19?CK=covid-19@nchc.org.tw&querydata=3001&limited=BGD')
+    date = r.json()[0]
+    data = data['a04']
+    total_count = data['a05']
+    count = data['a06']
     return F"日期：{date}, 人數：{count}, 確診總人數：{total_count}"
 
 
