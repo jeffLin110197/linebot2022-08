@@ -168,7 +168,7 @@ def sendTextMessageToMe():
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     productId = "5ac21a8c040ab15980c9b43f"
-    name = "Miles"
+    name = "Jeff"
     message = dict()
     message["type"] = "text"
     message["text"] = "".join("$" for r in range(len(name)))
@@ -389,7 +389,7 @@ def line_login():
             name = content["displayName"]
             userID = content["userId"]
             pictureURL = content["pictureUrl"]
-            statusMessage = content["statusMessage"]
+            statusMessage = content.get("statusMessage", "")
             print(content)
             return render_template('profile.html', name=name, pictureURL=
                                    pictureURL, userID=userID, statusMessage=
