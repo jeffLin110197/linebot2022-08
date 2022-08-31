@@ -220,7 +220,11 @@ def getTaipei101LocationMessage():
 
 
 def getMRTVideoMessage():
-    message = dict
+    message = {
+        "type": "video",
+        "originalContentUrl": F"{end_point}/static/taipei_101_video.mp4",
+        "previewImageUrl": F"{end_point}/static/taipei_101.jpeg"
+    }
     return message
 
 
@@ -241,7 +245,11 @@ def getTaipei101ImageMessage(originalContentUrl=F"{end_point}/static/taipei_101.
 
 
 def getImageMessage(originalContentUrl):
-    message = dict()
+    message = {
+        "type": "image",
+        "originalContentUrl": "https://example.com/original.jpg",
+        "previewImageUrl": "https://example.com/preview.jpg"
+    }
     return message
 
 
