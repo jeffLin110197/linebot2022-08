@@ -168,17 +168,17 @@ def sendTextMessageToMe():
 def getNameEmojiMessage():
     lookUpStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     productId = "5ac21a8c040ab15980c9b43f"
-    name = "jefflin"
+    name = "Frank"
     message = dict()
-    message['type'] = 'text'
-    message['text'] = "".join("$" for r in range(len(name)))
+    message["type"] = "text"
+    message["text"] = "".join("$" for r in range(len(name)))
     emojis_list = list()
-    for i ,nChar in enumerate(name):
+    for i, nChar in enumerate(name):
         emojis_list.append(
             {
-                "index": i,
-                "productId": productId,
-                "emojiId": f"{lookUpStr.index(nChar) + 1 :03}"
+              "index": i,
+              "productId": productId,
+              "emojiId": f"{lookUpStr.index(nChar) + 1 :03}"
             }
         )
     message["emojis"] = emojis_list
@@ -209,12 +209,18 @@ def getPlayStickerMessage():
 
 
 def getTaipei101LocationMessage():
-    message = dict()
+    message = {
+        "type":"location",
+        "title":"台北101",
+        "address":"110台北市信義區市府路45號",
+        "latitude":25.033671,
+        "longitude":121.564427
+    }
     return message
 
 
 def getMRTVideoMessage():
-    message = dict()
+    message = dict
     return message
 
 
