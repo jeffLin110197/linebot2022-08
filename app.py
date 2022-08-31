@@ -223,7 +223,7 @@ def getMRTVideoMessage():
     message = {
         "type": "video",
         "originalContentUrl": F"{end_point}/static/taipei_101_video.mp4",
-        "previewImageUrl": F"{end_point}/static/taipei_101.jpg"
+        "previewImageUrl": F"{end_point}/static/taipei_101.jpeg"
     }
     return message
 
