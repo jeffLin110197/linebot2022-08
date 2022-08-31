@@ -210,11 +210,11 @@ def getPlayStickerMessage():
 
 def getTaipei101LocationMessage():
     message = {
-        "type":"location",
-        "title":"台北101",
-        "address":"110台北市信義區市府路45號",
-        "latitude":25.033671,
-        "longitude":121.564427
+        "type": "location",
+        "title": "台北101",
+        "address": "110台北市信義區市府路45號",
+        "latitude": 25.033671,
+        "longitude": 121.564427
     }
     return message
 
